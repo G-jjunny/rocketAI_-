@@ -1,10 +1,19 @@
 import React from "react";
+import { dayFormat } from "@/shared/libs/day";
+import { User } from "../model/types";
 
-export const SajuHeader = () => {
+interface SajuHeaderProps {
+  UserData: User;
+}
+
+/** header는 단순 props로 처리 */
+export const SajuHeader = ({ UserData }: SajuHeaderProps) => {
   return (
-    <div className=" text-center">
-      <h2 className=" text-md">{}님의 사주</h2>
-      <h1 className=" text-xl">1998년 10월 31일 12:30</h1>
+    <div className=" text-center flex flex-col gap-3">
+      <h2 className=" text-md">{UserData?.name}님의 사주</h2>
+      <h1 className=" text-xl">
+        {dayFormat(UserData?.birthday)} {UserData?.time}
+      </h1>
     </div>
   );
 };

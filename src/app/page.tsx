@@ -2,11 +2,12 @@ import Image from "next/image";
 import Toon from "@/shared/bg_toon.png";
 import { SpeechBubble } from "@/shared/ui/SpeechBubble";
 import { Saju } from "@/views/ui/Saju";
-import Toon1 from "@/shared/Toon1.png";
-import Toon2 from "@/shared/Toon2.png";
-import Toon3 from "@/shared/Toon3.png";
+import { dummyUser } from "@/features/model/dummyUser";
 
 export default function Home() {
+  /** 기존 과정에서 저장된 User data 호출부 */
+  const UserData = dummyUser;
+
   return (
     <div className="relative">
       <Image src={Toon} alt="toon" />
@@ -23,7 +24,7 @@ export default function Home() {
         <p>보기 쉽게 표로 정리했어요.</p>
       </SpeechBubble>
       <div className=" absolute left-0 bottom-0 w-full">
-        <Saju />
+        <Saju UserData={UserData} />
       </div>
     </div>
   );

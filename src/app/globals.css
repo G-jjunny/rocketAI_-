@@ -4,14 +4,23 @@
   --background: #ffffff;
   --foreground: #171717;
   --bg-primary: #f3f2ef;
+  --table: #f5f3ec;
+  --pri-navy: #2b557e;
+  --pri-red: #C23030;
+  --pri-green: #18868C;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--bg-primary);
+  --color-table: var(--table);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-pri-navy : var(--pri-navy)
+  --color-pri-red : var(--pri-red)
+  --color-pri-green : var(--pri-green)
 }
 
 @media (prefers-color-scheme: dark) {
