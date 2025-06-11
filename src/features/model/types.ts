@@ -11,11 +11,11 @@ export interface User {
 export interface DataTableContent {
   sub?: string;
   ch: string;
-  des: string;
+  des?: string;
 }
 
 export interface DataTable {
   id: number;
   type?: null | "tile";
-  contents: DataTableContent[];
+  contents?: (DataTableContent | undefined)[];
 }

@@ -1,3 +1,5 @@
+import { DataTable } from "./types";
+
 // 테이블 열 헤더
 export const COLUMN_HEADERS = ["時", "日", "月", "年"] as const;
 
@@ -13,7 +15,7 @@ export const ROW_HEADERS = [
 ] as const;
 
 // 내부 사주 데이터
-export const TABLE_TILES = [
+export const TABLE_TILES: DataTable[] = [
   {
     id: 1,
     contents: [
@@ -71,13 +73,13 @@ export const TABLE_TILES = [
   {
     id: 7,
     contents: [
-      {},
-      {},
+      undefined,
+      undefined,
       { ch: "天乙", des: "천을귀인" },
       { ch: "天乙", des: "천을귀인" },
     ],
   },
-] as const;
+];
 
 export type ColumnHeader = (typeof COLUMN_HEADERS)[number];
 export type RowHeader = (typeof ROW_HEADERS)[number];

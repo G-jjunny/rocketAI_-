@@ -39,17 +39,17 @@ export const SajuTable = ({ UserData }: UserDataProps) => {
                   <div className="text-[10px] text-gray-600">({row.des})</div>
                 </th>
                 {COLUMN_HEADERS.map((_, colIndex) => {
-                  const content = rowData?.contents[colIndex];
+                  const content = rowData?.contents?.[colIndex];
                   return (
                     <td
                       key={colIndex}
                       className="border h-12 p-[6px] bg-background"
                     >
-                      {content?.ch ? (
+                      {content ? (
                         <ColorTile
                           ch={content.ch}
                           des={content.des}
-                          sub={content.sub}
+                          sub={content.sub ?? undefined}
                         />
                       ) : (
                         <div className="text-center text-xs ">(없음)</div>
