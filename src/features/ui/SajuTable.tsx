@@ -40,6 +40,7 @@ export const SajuTable = ({ UserData }: UserDataProps) => {
                 </th>
                 {COLUMN_HEADERS.map((_, colIndex) => {
                   const content = rowData?.contents?.[colIndex];
+
                   return (
                     <td
                       key={colIndex}
@@ -49,7 +50,8 @@ export const SajuTable = ({ UserData }: UserDataProps) => {
                         <ColorTile
                           ch={content.ch}
                           des={content.des}
-                          sub={content.sub ?? undefined}
+                          sub={content.sub}
+                          theme={content.theme}
                         />
                       ) : (
                         <div className="text-center text-xs ">(없음)</div>

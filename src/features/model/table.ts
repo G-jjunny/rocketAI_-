@@ -28,19 +28,19 @@ export const TABLE_TILES: DataTable[] = [
   {
     id: 2,
     contents: [
-      { ch: "壬", des: "임", sub: "陽水" },
-      { ch: "丁", des: "정", sub: "陰火" },
-      { ch: "癸", des: "계", sub: "陰水" },
-      { ch: "癸", des: "계", sub: "陰水" },
+      { ch: "壬", des: "임", sub: "陽水", theme: "black" },
+      { ch: "丁", des: "정", sub: "陰火", theme: "black" },
+      { ch: "癸", des: "계", sub: "陰水", theme: "red" },
+      { ch: "癸", des: "계", sub: "陰水", theme: "black" },
     ],
   },
   {
     id: 3,
     contents: [
-      { ch: "寅", des: "인", sub: "陽木" },
-      { ch: "巳", des: "사", sub: "陰火" },
-      { ch: "亥", des: "해", sub: "陰水" },
-      { ch: "酉", des: "유", sub: "陰金" },
+      { ch: "寅", des: "인", sub: "陽木", theme: "green" },
+      { ch: "巳", des: "사", sub: "陰火", theme: "red" },
+      { ch: "亥", des: "해", sub: "陰水", theme: "black" },
+      { ch: "酉", des: "유", sub: "陰金", theme: "white" },
     ],
   },
   {

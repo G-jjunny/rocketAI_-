@@ -23,6 +23,12 @@
   --color-pri-green : var(--pri-green)
 }
 
+@theme {
+  --color-pri-navy : var(--pri-navy)
+  --color-pri-red : var(--pri-red)
+  --color-pri-green : var(--pri-green)
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
