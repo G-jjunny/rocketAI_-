@@ -7,7 +7,12 @@ interface SpeechBubbleProps extends PropsWithChildren {
 
 export const SpeechBubble = ({ className, children }: SpeechBubbleProps) => {
   return (
-    <div className={cn(" absolute flex flex-col items-center", className)}>
+    <div
+      className={cn(
+        " absolute flex flex-col items-center xs:text-[16px] text-xs",
+        className
+      )}
+    >
       {children}
     </div>
   );

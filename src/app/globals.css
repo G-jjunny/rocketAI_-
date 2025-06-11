@@ -6,8 +6,8 @@
   --bg-primary: #f3f2ef;
   --table: #f5f3ec;
   --pri-navy: #2b557e;
-  --pri-red: #C23030;
-  --pri-green: #18868C;
+  --pri-red: #c23030;
+  --pri-green: #18868c;
 }
 
 @theme inline {
@@ -18,15 +18,17 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --color-pri-navy : var(--pri-navy)
-  --color-pri-red : var(--pri-red)
-  --color-pri-green : var(--pri-green)
+  --color-pri-navy: var(--pri-navy);
+  --color-pri-red: var(--pri-red);
+  --color-pri-green: var(--pri-green);
 }
 
 @theme {
-  --color-pri-navy : var(--pri-navy)
-  --color-pri-red : var(--pri-red)
-  --color-pri-green : var(--pri-green)
+  --color-pri-navy: var(--pri-navy);
+  --color-pri-red: var(--pri-red);
+  --color-pri-green: var(--pri-green);
+
+  --breakpoint-xs: 400px;
 }
 
 @media (prefers-color-scheme: dark) {
