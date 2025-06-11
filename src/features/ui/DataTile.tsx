@@ -2,7 +2,7 @@ import React from "react";
 import { DataTableContent } from "../model/types";
 import { getThemeBgClass } from "../model/utils";
 
-export const ColorTile = ({ ch, des, sub, theme }: DataTableContent) => {
+export const DataTile = ({ ch, des, sub, theme }: DataTableContent) => {
   /** 배경 색이 있는 데이터 tile */
   if (sub)
     return (

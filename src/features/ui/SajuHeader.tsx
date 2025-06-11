@@ -11,7 +11,7 @@ export const SajuHeader = ({ UserData }: SajuHeaderProps) => {
   return (
     <div className=" text-center flex flex-col gap-3">
       <h2 className=" text-md">{UserData?.name}님의 사주</h2>
-      <h1 className=" text-xl">
+      <h1 className=" text-xl font-semibold">
         {dayFormat(UserData?.birthday)} {UserData?.time}
       </h1>
     </div>

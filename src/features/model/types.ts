@@ -21,5 +21,5 @@ export interface DataTableContent {
 export interface DataTable {
   id: number;
   type?: null | "tile";
-  contents?: (DataTableContent | undefined)[];
+  contents?: (DataTableContent | DataTableContent[] | undefined)[];
 }

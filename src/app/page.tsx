@@ -22,7 +22,7 @@ export default function Home() {
         <p>제가 {name}님의 사주를</p>
         <p>보기 쉽게 표로 정리했어요.</p>
       </SpeechBubble>
-      <div className=" absolute left-0 bottom-0 w-full">
+      <div className=" absolute left-0 top-[66%] w-full">
         <Saju UserData={UserData} />
       </div>
     </div>

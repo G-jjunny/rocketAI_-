@@ -1,7 +1,8 @@
 import React from "react";
 import { User } from "../model/types";
 import { COLUMN_HEADERS, ROW_HEADERS, TABLE_TILES } from "../model/table";
-import { ColorTile } from "./ColorTile";
+import { DataTile } from "./DataTile";
+import { EmptyTile } from "./EmptyTile";
 
 interface UserDataProps {
   UserData: User;
@@ -47,14 +48,28 @@ export const SajuTable = ({ UserData }: UserDataProps) => {
                       className="border h-12 p-[6px] bg-background"
                     >
                       {content ? (
-                        <ColorTile
-                          ch={content.ch}
-                          des={content.des}
-                          sub={content.sub}
-                          theme={content.theme}
-                        />
+                        Array.isArray(content) ? (
+                          <div className="flex flex-col gap-1 items-center">
+                            {content.map((item, i) => (
+                              <DataTile
+                                key={i}
+                                ch={item.ch}
+                                des={item.des}
+                                sub={item.sub}
+                                theme={item.theme}
+                              />
+                            ))}
+                          </div>
+                        ) : (
+                          <DataTile
+                            ch={content.ch}
+                            des={content.des}
+                            sub={content.sub}
+                            theme={content.theme}
+                          />
+                        )
                       ) : (
-                        <div className="text-center text-xs ">(없음)</div>
+                        <EmptyTile />
                       )}
                     </td>
                   );

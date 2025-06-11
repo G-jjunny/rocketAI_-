@@ -76,7 +76,11 @@ export const TABLE_TILES: DataTable[] = [
       undefined,
       undefined,
       { ch: "天乙", des: "천을귀인" },
-      { ch: "天乙", des: "천을귀인" },
+      [
+        { ch: "天乙", des: "천을귀인" },
+        { ch: "太極", des: "태극귀인" },
+        { ch: "文昌", des: "문창귀인" },
+      ],
     ],
   },
 ];
